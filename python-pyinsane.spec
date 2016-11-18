@@ -11,20 +11,22 @@
 %endif
 
 Name:           python-%{prjname}
-Version:        1.4.0
+Version:        2.0.3
 Release:        1%{?dist}
 Summary:        Python implementation of libsane and abstration layers
 
 License:        GPLv3
 URL:            https://github.com/jflesch/%{prjname}
-Source0:        https://github.com/jflesch/%{prjname}/archive/v%{version}/%{name}-%{version}.tar.gz
+Source0:        https://github.com/jflesch/%{prjname}/archive/%{version}/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 BuildArch:      noarch
 BuildRequires:  python2-devel
+BuildRequires:  python-nose
 BuildRequires:  python-pillow-devel
 BuildRequires:  sane-backends-devel
 %if %{with python3}
 BuildRequires:  python3-devel
+BuildRequires:  python3-nose
 BuildRequires:  python3-pillow-devel
 %endif # with python3
 
@@ -114,5 +116,8 @@ popd
 
 
 %changelog
+* Fri Nov 18 2016 James Davidson <james@greycastle.net> - 2.0.3-1
+- Update to 2.0.3
+
 * Sun Aug 28 2016 James Davidson <james@greycastle.net>
 - Initial packaging
