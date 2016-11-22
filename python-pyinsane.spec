@@ -11,7 +11,7 @@
 %endif
 
 Name:           python-%{prjname}
-Version:        2.0.5
+Version:        2.0.6
 Release:        1%{?dist}
 Summary:        Python implementation of libsane and abstration layers
 
@@ -116,6 +116,9 @@ popd
 
 
 %changelog
+* Tue Nov 22 2016 James Davidson <james@greycastle.net> - 2.0.6-1
+- Update to 2.0.6
+
 * Sat Nov 19 2016 James Davidson <james@greycastle.net> - 2.0.5-1
 - Update to 2.0.5
 
