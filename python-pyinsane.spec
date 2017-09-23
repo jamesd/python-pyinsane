@@ -11,9 +11,9 @@
 %endif
 
 Name:           python-%{prjname}
-Version:        2.0.7
+Version:        2.0.10
 Release:        1%{?dist}
-Summary:        Python implementation of libsane and abstration layers
+Summary:        Python implementation of libsane and abstraction layers
 
 License:        GPLv3
 URL:            https://github.com/jflesch/%{prjname}
@@ -32,7 +32,7 @@ BuildRequires:  python3-pillow-devel
 
 %description
 Pure python implementation of the libsane (using ctypes) and
-abstration layers.
+abstraction layers.
 
 It supports:
 
@@ -95,27 +95,25 @@ pushd python2
 %{__python2} setup.py test
 popd
 
-# %if %{with python3}
-# pushd python3
-# %{__python3} setup.py test
-# popd
-# %endif
-
 
 %files
-%license python2/COPYING
+%license python2/LICENSE
 %doc python2/README.md python2/ChangeLog
 %{python2_sitelib}/*
 
 %if %{with python3}
 %files -n python3-%{prjname}
-%license python3/COPYING
+%license python3/LICENSE
 %doc python3/README.md python3/ChangeLog
 %{python3_sitelib}/*
 %endif # with python3
 
 
 %changelog
+* Sat Sep 23 2017 James Davidson <james@greycastle.net> - 2.0.10-1
+- Update to upstream release 2.0.10
+- Clean up rpmlint issues
+
 * Tue Nov 22 2016 James Davidson <james@greycastle.net> - 2.0.7-1
 - Update to 2.0.7
 
