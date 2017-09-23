@@ -48,7 +48,7 @@ It supports:
 Summary:        %{summary}
 
 %description -n python3-%{prjname}
-%{description}
+%{summary}
 
 %endif # with python3
 
